@@ -13,14 +13,14 @@ const updateTask = (req, res)=>{
 }
 
 const createTask = async (req, res) => {
-    res.json(req.body)
-    // try {
-    //     const task = await Task.create(req.body);
-    //     res.status(201).json({task});
+   // res.json(req.body)
+    try {
+        const task = await Task.create(req.body);
+        res.status(201).json({task});
        
-    // } catch (error) {
-    //     res.status(400).json({ error: error.message });
-    // }
+    } catch (error) {
+        res.status(400).json({ error: error.message });
+    }
 } ;
 
 const deleteTask = (req, res)=>{

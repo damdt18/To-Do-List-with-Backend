@@ -8,6 +8,7 @@ const tasks = require ('./routes/tasks')
 ConectionMongo()
 
 //routes
+app.use(express.json());
 app.use('/api/v1/tasks', tasks)
 
 const port= 3000
